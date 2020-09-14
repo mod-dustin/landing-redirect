@@ -8,7 +8,7 @@ Plugin Name:   Landing Redirect
 Plugin URI:    https://www.ministryofdesign.com.au/
 Description:   When activated redirects all visitors not logged-in to /landing/, if page with that title exists.
 Author:        Ministry of Design
-Version:       1.0
+Version:       1.1
 Author URI:    https://www.ministryofdesign.com.au/
 License:       GPL-2.0 or later
 License URI:   http://www.gnu.org/licenses/gpl-2.0.txt
