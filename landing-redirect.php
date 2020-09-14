@@ -39,3 +39,20 @@ function mod_landing_redirect()
 }
 
 add_action('template_redirect', 'mod_landing_redirect');
+
+
+
+
+
+function mod_woo_disable_login() {
+
+	if (the_slug_exists($landing_slug) && is_plugin_active( 'woocommerce/woocommerce.php' )) {
+
+		remove_filter('lostpassword_url', 'wc_lostpassword_url', 10, 1);
+
+	} else {
+		exit();
+	}
+}
+
+add_action('init', 'mod_woo_disable_login');
