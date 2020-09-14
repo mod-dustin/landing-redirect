@@ -46,12 +46,13 @@ add_action('template_redirect', 'mod_landing_redirect');
 
 function mod_woo_disable_login() {
 
+	$landing_slug = 'landing';
+	
 	if (the_slug_exists($landing_slug) && is_plugin_active( 'woocommerce/woocommerce.php' )) {
 
 		remove_filter('lostpassword_url', 'wc_lostpassword_url', 10, 1);
 
 	} else {
-		exit();
 	}
 }
 
